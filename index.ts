@@ -9,7 +9,11 @@ const server = app.listen(3001, () => {
 
 const socketIo = new Server(server, {
     cors: {
-        origin: ["https://realtime-db.vercel.app", "http://localhost:3000"],
+        origin: [
+            "https://realtime-db.vercel.app",
+            "http://localhost:3000",
+            "https://realtime-db.netlify.app/",
+        ],
         methods: ["GET", "POST"],
     },
 });
