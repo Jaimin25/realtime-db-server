@@ -9,7 +9,7 @@ const server = app.listen(3001, () => {
 
 const socketIo = new Server(server, {
     cors: {
-        origin: ["http://localhost:3000, https://realtime-db.vercel.app/"],
+        origin: ["http://localhost:3000", "https://realtime-db.vercel.app/"],
         methods: ["GET", "POST"],
     },
 });
