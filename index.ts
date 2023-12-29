@@ -9,7 +9,7 @@ const server = app.listen(3001, () => {
 
 const socketIo = new Server(server, {
     cors: {
-        origin: ["*"],
+        origin: "*",
         methods: ["GET", "POST"],
     },
 });
