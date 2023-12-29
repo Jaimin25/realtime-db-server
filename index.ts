@@ -10,12 +10,12 @@ const server = app.listen(3001, () => {
 const socketIo = new Server(server, {
     cors: {
         origin: "*",
-        methods: ["GET", "POST"],
     },
 });
 
 socketIo.on("connection", (socket) => {
     socket.on("send-message", (message) => {
+        console.log(message);
         socketIo.emit("receive-message", message);
     });
 });
