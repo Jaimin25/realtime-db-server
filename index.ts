@@ -9,11 +9,7 @@ const server = app.listen(3001, () => {
 
 const socketIo = new Server(server, {
     cors: {
-        origin: [
-            "https://realtime-db.vercel.app",
-            "http://localhost:3000",
-            "https://realtime-ahc8.onrender.com/",
-        ],
+        origin: ["*"],
         methods: ["GET", "POST"],
     },
 });
